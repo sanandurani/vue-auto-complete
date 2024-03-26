@@ -1,17 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <v-app>
+      <v-container fluid>
+        <v-row
+          align="center"
+        >
+          <v-col cols="12">
+            <img alt="Vue logo" src="./assets/logo.png">
+          </v-col>
+          <v-col cols="12">
+            <vAuto />
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-app>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import vAuto from './components/v-auto.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    vAuto
   }
 }
 </script>
