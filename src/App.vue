@@ -3,9 +3,9 @@
     <v-app>
       <v-container fluid>
         <v-row
-          align="center"
+          class="justify-center items-center"
         >
-          <v-col cols="12">
+          <v-col cols="2">
             <img alt="Vue logo" src="./assets/logo.png">
           </v-col>
           <v-col cols="12">
