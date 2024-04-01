@@ -3,7 +3,6 @@
     <input 
         v-model="searchText" 
         @focus="onFocus" 
-        @blur="onBlur" 
         @input="onInputChange"
         @click="onClick"
         @keydown="onKeyDown"
@@ -193,10 +192,6 @@ export default {
       this.selectedItems = [];
       this.searchText = '';
       this.isOpen = false;
-    },
-    onBlur() {
-      this.isOpen = false;
-      this.$emit('blur');
     },
     onFocus() {
       this.isOpen = true;

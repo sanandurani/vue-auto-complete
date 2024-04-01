@@ -8,7 +8,12 @@
           <v-col cols="2">
             <img alt="Vue logo" src="./assets/logo.png">
           </v-col>
-          <v-col cols="12">
+          <v-col cols="12" />
+          <v-col cols="6">
+            <VAutocomplete />
+          </v-col>
+          
+          <v-col cols="6">
             <t-autocomplete 
               :items="options" 
               v-model="selectedItem"
@@ -30,11 +35,13 @@
 
 <script>
 import TAutocomplete from './components/TAutocomplete.vue';
+import VAutocomplete from './components/VAutocomplete.vue';
 
 export default {
   name: 'App',
   components: {
-    TAutocomplete
+    TAutocomplete,
+    VAutocomplete,
   },
   methods: {
     onClick() {
