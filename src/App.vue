@@ -9,7 +9,18 @@
             <img alt="Vue logo" src="./assets/logo.png">
           </v-col>
           <v-col cols="12">
-            <vAuto />
+            <t-autocomplete 
+              :items="options" 
+              v-model="selectedItem"
+              @click="onClick"
+              placeholder="Type to search" 
+              clearable 
+              item-text="name" 
+              item-value="id"
+              maxHeight="auto"
+              :loading="loading" 
+              @search="onSearch"
+            ></t-autocomplete>
           </v-col>
         </v-row>
       </v-container>
@@ -18,13 +29,49 @@
 </template>
 
 <script>
-import vAuto from './components/v-auto.vue';
+import TAutocomplete from './components/TAutocomplete.vue';
 
 export default {
   name: 'App',
   components: {
-    vAuto
-  }
+    TAutocomplete
+  },
+  methods: {
+    onClick() {
+      console.log('Search triggered');
+    },
+    onSearch() {
+      console.log('Search triggered');
+    }
+  },
+  data: function() {
+    return {
+      options: [{
+        id: 1,
+        name: 'Apple'
+      },
+      {
+        id: 2,
+        name: 'Banana'
+      },
+      {
+        id: 3,
+        name: 'Cherry'
+      },
+      {
+        id: 4,
+        name: 'Date'
+      },
+      {
+        id: 5,
+        name: 'Elderberry'
+      },
+    ],
+    selectedItem: '',
+    isItemSelected: false,
+    loading: false
+  };
+},
 }
 </script>
 
