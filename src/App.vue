@@ -9,11 +9,10 @@
             <img alt="Vue logo" src="./assets/logo.png">
           </v-col>
           <v-col cols="12" />
-          <v-col cols="6">
+          <v-col cols="12">
             <VAutocomplete />
           </v-col>
-          
-          <v-col cols="6">
+          <v-col cols="12">
             <t-autocomplete 
               :items="options" 
               v-model="selectedItem"
@@ -54,25 +53,45 @@ export default {
   data: function() {
     return {
       options: [{
-        id: 1,
-        name: 'Apple'
-      },
-      {
-        id: 2,
-        name: 'Banana'
-      },
-      {
-        id: 3,
-        name: 'Cherry'
-      },
-      {
-        id: 4,
-        name: 'Date'
-      },
-      {
-        id: 5,
-        name: 'Elderberry'
-      },
+            id: 1,
+            name: 'Apple'
+          },
+          {
+            id: 2,
+            name: 'Banana'
+          },
+          {
+            id: 3,
+            name: 'Cherry'
+          },
+          {
+            id: 4,
+            name: 'Date'
+          },
+          {
+            id: 5,
+            name: 'Elderberry'
+          },
+          {
+            id: 6,
+            name: 'Apple'
+          },
+          {
+            id: 7,
+            name: 'Banana'
+          },
+          {
+            id: 8,
+            name: 'Cherry'
+          },
+          {
+            id: 9,
+            name: 'Date'
+          },
+          {
+            id: 10,
+            name: 'Elderberry'
+          },
     ],
     selectedItem: '',
     isItemSelected: false,
